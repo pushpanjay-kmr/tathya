@@ -17,7 +17,7 @@ Phases are sequential. Each has an exit test: the phase is done when the test pa
 - [x] Web app scaffold in `apps/web` (Next.js, TypeScript, Tailwind)
 - [x] Docker Compose for PostgreSQL
 - [x] Database migration for reference and market-data tables
-- [ ] Python pipeline scaffold in `pipeline`
+- [x] Python pipeline scaffold in `pipeline`
 - [ ] Seed data: industries, indices, cap buckets
 - [ ] Price provider for end-of-day data, with validation
 - [ ] Backfill at least 2 years of daily prices

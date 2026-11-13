@@ -45,7 +45,7 @@ npm run dev
 
 Open http://localhost:3000. You should see the Tathya header, an empty "Market overview" page and the disclaimer footer.
 
-More detail: [web app](apps/web/README.md), [database](db/README.md).
+More detail: [web app](apps/web/README.md), [database](db/README.md), [data pipeline](pipeline/README.md).
 
 ## Repository layout
 
@@ -55,7 +55,7 @@ More detail: [web app](apps/web/README.md), [database](db/README.md).
 | `db/migrations/` | SQL files that create the database tables |
 | `docker-compose.yml` | Local PostgreSQL |
 | `docs/` | Product and design documents |
-| `pipeline/` | Python data pipeline (not created yet) |
+| `pipeline/` | Python data pipeline |
 
 ## Documentation
 

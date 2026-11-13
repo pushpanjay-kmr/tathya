@@ -1,0 +1,26 @@
+[project]
+name = "tathya-pipeline"
+version = "0.1.0"
+description = "Nightly data pipeline for Tathya: ingest, validate, compute, scan."
+requires-python = ">=3.11"
+dependencies = [
+    "pandas>=2.2",
+    "SQLAlchemy>=2.0",
+    "psycopg[binary]>=3.1",
+    "python-dotenv>=1.0",
+    "PyYAML>=6.0",
+    "click>=8.1",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+tathya-pipeline = "tathya_pipeline.cli:cli"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["tathya_pipeline*"]
