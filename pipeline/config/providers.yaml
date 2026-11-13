@@ -1,21 +1,10 @@
 # Which provider serves each dataset. See docs/07-data-sources.md.
 #
-# No entries are filled in yet: every free source needs its terms of use
-# read and recorded in docs/07-data-sources.md before it is wired in here
-# (see TODO.md, "Terms of use check for each free data source").
-#
-# Once a provider module exists under tathya_pipeline/providers/, add it
-# here, e.g.:
-#
-# providers:
-#   prices:
-#     primary: exchange_eod
-#     fallback: community_api
-#   fundamentals:
-#     primary: filings_derived
-#   ownership:
-#     primary: exchange_shareholding
-#   filings:
-#     primary: exchange_announcements
+# Every source needs its terms of use read and recorded in
+# docs/07-data-sources.md before it is wired in here (see TODO.md,
+# "Terms of use check for each free data source"). NSE and BSE are
+# blocked; EODHD's terms permit personal, non-commercial storage.
 
-providers: {}
+providers:
+  prices:
+    primary: eodhd

@@ -1,0 +1,10 @@
+# A small, hand-picked set of NSE symbols to track while on EODHD's free
+# tier (20 API calls/day). Widen this once the data source has a paid plan
+# with a real daily budget — see docs/07-data-sources.md.
+
+nse_symbols:
+  - RELIANCE
+  - TCS
+  - HDFCBANK
+  - INFY
+  - ICICIBANK

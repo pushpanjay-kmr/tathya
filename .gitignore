@@ -19,6 +19,8 @@ build/
 # Local data (never commit market data dumps)
 data/raw/
 data/cache/
+**/data/raw/
+**/data/cache/
 *.parquet
 *.sqlite
 

@@ -12,7 +12,15 @@ from __future__ import annotations
 
 from typing import Callable
 
-_REGISTRY: dict[str, Callable[[], object]] = {}
+def _eodhd():
+    from tathya_pipeline.providers.eodhd import EodhdProvider
+
+    return EodhdProvider()
+
+
+_REGISTRY: dict[str, Callable[[], object]] = {
+    "eodhd": _eodhd,
+}
 
 
 class ProviderNotRegistered(Exception):
