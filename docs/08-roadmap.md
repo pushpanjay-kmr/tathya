@@ -19,7 +19,7 @@ Phases are sequential. Each has an exit test: the phase is done when the test pa
 - [x] Database migration for reference and market-data tables
 - [x] Python pipeline scaffold in `pipeline`
 - [ ] Seed data: industries, indices, cap buckets
-- [ ] Price provider for end-of-day data, with validation
+- [x] Price provider for end-of-day data, with validation (sample provider only for now — see TODO.md, "Purge sample data...")
 - [ ] Backfill at least 2 years of daily prices
 - [x] Design tokens in Tailwind (both themes)
 - [ ] Base components (table, chip, tile, delta)

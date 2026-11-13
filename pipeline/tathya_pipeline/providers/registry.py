@@ -18,8 +18,15 @@ def _eodhd():
     return EodhdProvider()
 
 
+def _sample():
+    from tathya_pipeline.providers.sample import SampleProvider
+
+    return SampleProvider()
+
+
 _REGISTRY: dict[str, Callable[[], object]] = {
     "eodhd": _eodhd,
+    "sample": _sample,
 }
 
 

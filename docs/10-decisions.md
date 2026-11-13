@@ -13,6 +13,7 @@ Short records of decisions and their reasons. Newest last.
 | 8 | 2026-11-13 | Fonts are bundled from npm packages, not fetched from Google at build time | Builds work offline and do not depend on a third-party service | Accepted |
 | 7 | 2026-11-13 | Ledger (light) is the default visual direction; Terminal is the dark theme | Chosen after home page mockups in both directions: Ledger reads as the more professional, premium research product | Accepted |
 | 9 | 2026-11-13 | Pipeline uses SQLAlchemy Core (not the ORM) with psycopg3, and Click for the CLI | The schema is owned by `db/migrations/*.sql`; Core maps pandas DataFrames onto it more directly than an ORM would. Click gives subcommands (`ingest`, `compute`, `scan`, `all`) with little boilerplate | Accepted |
+| 10 | 2026-11-13 | Temporary exception to "no fake data in the app": a `sample` provider loads synthetic OHLCV for a handful of real companies, into the real dev database | No compliant free Indian price source exists yet (NSE, BSE and EODHD all checked, see `docs/07-data-sources.md`); the owner wants to keep developing app features against something real-shaped rather than wait. `source = 'sample'` on every row makes it unmistakable, and it must be purged before any real use, demo or public version | Accepted, time-boxed |
 
 ## Open questions
 

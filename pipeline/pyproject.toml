@@ -5,6 +5,7 @@ description = "Nightly data pipeline for Tathya: ingest, validate, compute, scan
 requires-python = ">=3.11"
 dependencies = [
     "pandas>=2.2",
+    "numpy>=1.26",
     "SQLAlchemy>=2.0",
     "psycopg[binary]>=3.1",
     "python-dotenv>=1.0",

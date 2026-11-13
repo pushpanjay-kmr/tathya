@@ -3,8 +3,14 @@
 # Every source needs its terms of use read and recorded in
 # docs/07-data-sources.md before it is wired in here (see TODO.md,
 # "Terms of use check for each free data source"). NSE and BSE are
-# blocked; EODHD's terms permit personal, non-commercial storage.
+# blocked; EODHD's terms permit personal, non-commercial storage but it
+# doesn't serve NSE/BSE on the current plan.
+#
+# TEMPORARY, approved 2026-11-13 (docs/10-decisions.md #10): "prices"
+# points at the synthetic `sample` provider to unblock app development.
+# Every row it produces is tagged source = "sample". Switch this back to
+# a real provider before any real use — see TODO.md.
 
 providers:
   prices:
-    primary: eodhd
+    primary: sample
