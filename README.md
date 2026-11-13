@@ -2,7 +2,7 @@
 
 > **तथ्य** (*tathya*) means "fact". Tathya is a research and analysis workbench for Indian stocks: market overview, nightly scans, a formula screener, shareholding tracking and AI-assisted reading of company filings.
 
-**Status:** design phase. No application code yet. This repository currently holds the product and design documents that the build will follow.
+**Status:** Phase 1 (Foundation) in progress. The web app shell and the database schema exist. There is no market data yet.
 
 > [!WARNING]
 > Tathya is a personal project for learning and private research. Nothing in it is investment advice or a recommendation to buy or sell any security. See [Compliance and disclaimer](docs/09-compliance-and-disclaimer.md).
@@ -23,6 +23,39 @@
 | Ask Tathya | Question answering over a company's filings and concall transcripts |
 
 Tathya is an analysis tool. It does not place orders or connect to a broker.
+
+## Getting started
+
+You need [Node.js](https://nodejs.org) 20 or newer and [Docker Desktop](https://www.docker.com/products/docker-desktop/).
+
+**1. Start the database**
+
+```
+cp .env.example .env
+docker compose up -d
+```
+
+**2. Start the web app**
+
+```
+cd apps/web
+npm install
+npm run dev
+```
+
+Open http://localhost:3000. You should see the Tathya header, an empty "Market overview" page and the disclaimer footer.
+
+More detail: [web app](apps/web/README.md), [database](db/README.md).
+
+## Repository layout
+
+| Path | What it holds |
+|---|---|
+| `apps/web/` | The Next.js web application |
+| `db/migrations/` | SQL files that create the database tables |
+| `docker-compose.yml` | Local PostgreSQL |
+| `docs/` | Product and design documents |
+| `pipeline/` | Python data pipeline (not created yet) |
 
 ## Documentation
 
@@ -52,14 +85,14 @@ Open items are tracked in [TODO.md](TODO.md).
 | Data jobs | Python (pandas) run on a nightly schedule |
 | AI | LLM calls behind a single service module, with retrieval over stored filings |
 
-Details and reasoning are in [Architecture](docs/05-architecture.md). The stack is a proposal until Phase 1 starts.
+Details and reasoning are in [Architecture](docs/05-architecture.md).
 
 ## Roadmap at a glance
 
 | Phase | Outcome | State |
 |---|---|---|
-| 0. Design | Documents in this repo, visual direction chosen, mockups of core screens | In progress |
-| 1. Foundation | Repo scaffold, database, ingestion of end-of-day prices | Not started |
+| 0. Design | Documents in this repo, visual direction chosen, mockups of core screens | Done |
+| 1. Foundation | Repo scaffold, database, ingestion of end-of-day prices | In progress |
 | 2. Core | Market overview, stock page, charts | Not started |
 | 3. Scanner and screener | Nightly scan engine, formula screener | Not started |
 | 4. Ownership and events | Smart money, results, filings, IPOs | Not started |

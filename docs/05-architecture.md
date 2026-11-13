@@ -1,6 +1,6 @@
 # 05. Architecture
 
-Status: **proposed**. Confirmed when Phase 1 starts.
+Status: **accepted**. Phase 1 has started.
 
 ## Overview
 

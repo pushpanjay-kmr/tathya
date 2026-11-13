@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+/*
+  Tathya design tokens. Source of truth: docs/04-design-system.md.
+  Ledger (light) is the default theme. Terminal (dark) applies when
+  <html data-theme="dark"> is set.
+*/
+:root {
+  --bg: #faf8f4;
+  --surface: #ffffff;
+  --border: #e6e1d8;
+  --border-soft: #f3f0ea;
+  --ink: #1c1b19;
+  --muted: #6b665e;
+  --accent: #1f4e5f;
+  --accent-soft: #e3eef1;
+  --on-accent: #ffffff;
+  --up: #087a40;
+  --down: #c93a3a;
+  --warn: #8a5a12;
+  --danger: #9b1c1c;
+}
+
+[data-theme="dark"] {
+  --bg: #0e1116;
+  --surface: #161b22;
+  --border: #262d38;
+  --border-soft: #1e242d;
+  --ink: #e6eaf0;
+  --muted: #8b95a5;
+  --accent: #f2b84b;
+  --accent-soft: #3a2f17;
+  --on-accent: #0e1116;
+  --up: #35c27b;
+  --down: #f06a6a;
+  --warn: #e0a840;
+  --danger: #f28b82;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-border: var(--border);
+  --color-border-soft: var(--border-soft);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-on-accent: var(--on-accent);
+  --color-up: var(--up);
+  --color-down: var(--down);
+  --color-warn: var(--warn);
+  --color-danger: var(--danger);
+  --font-sans: "Inter Variable", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  --font-devanagari: "Noto Sans Devanagari", sans-serif;
+  --radius-control: 6px;
+  --radius-card: 10px;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-size: 14px;
+  line-height: 20px;
+  /* Digits line up in columns everywhere. */
+  font-variant-numeric: tabular-nums;
+}

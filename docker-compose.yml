@@ -1,0 +1,23 @@
+# Local services for development. Start with: docker compose up -d
+services:
+  db:
+    image: postgres:16
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-tathya}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-tathya_dev}
+      POSTGRES_DB: ${POSTGRES_DB:-tathya}
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - tathya_pgdata:/var/lib/postgresql/data
+      # SQL files here run once, in name order, when the database is first created.
+      - ./db/migrations:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${POSTGRES_USER:-tathya} -d ${POSTGRES_DB:-tathya}"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+volumes:
+  tathya_pgdata:

@@ -13,12 +13,17 @@ Deferred items and open questions. Build tasks live in the [roadmap](docs/08-roa
 
 - [x] Home page mockups in both visual directions (Ledger, Terminal)
 - [x] Choose the default direction and record it in the decision log (Ledger)
-- [x] Mockups: stock page, scanner, screener (awaiting approval)
+- [x] Mockups: stock page, scanner, screener
 - [ ] Wordmark and favicon
+
+## Engineering follow-ups
+
+- [ ] Add a migration tool so new SQL files apply to an existing database automatically
+- [ ] Theme toggle for the Terminal (dark) theme
+- [ ] Favicon
 
 ## Open questions
 
-- [ ] Confirm the tech stack (currently proposed)
 - [ ] Local only, or private hosted deployment?
 - [ ] LLM provider and monthly budget for the AI layer
 - [ ] Default financial basis: consolidated or standalone

@@ -2,25 +2,30 @@
 
 Phases are sequential. Each has an exit test: the phase is done when the test passes, not when the tasks are ticked.
 
-## Phase 0. Design (in progress)
+## Phase 0. Design (done)
 
 - [x] Product and design documents in the repo
 - [x] Home page mockups in both visual directions
 - [x] Choose a direction and record it (Ledger default, Terminal dark)
-- [x] Mockups: stock page, scanner, screener (awaiting approval)
-- [ ] Confirm tech stack
+- [x] Mockups: stock page, scanner, screener
+- [x] Confirm tech stack
 
 **Exit test:** the four core screens are mocked up in the chosen direction and approved.
 
-## Phase 1. Foundation
+## Phase 1. Foundation (in progress)
 
-- [ ] Repository scaffold: `apps/web`, `pipeline`, `db`, Docker Compose
-- [ ] Database migrations for reference and market-data tables
+- [x] Web app scaffold in `apps/web` (Next.js, TypeScript, Tailwind)
+- [x] Docker Compose for PostgreSQL
+- [x] Database migration for reference and market-data tables
+- [ ] Python pipeline scaffold in `pipeline`
 - [ ] Seed data: industries, indices, cap buckets
 - [ ] Price provider for end-of-day data, with validation
 - [ ] Backfill at least 2 years of daily prices
-- [ ] Design tokens in Tailwind; base components (table, chip, tile, delta)
-- [ ] App shell: top bar, search, theme toggle, disclaimer footer
+- [x] Design tokens in Tailwind (both themes)
+- [ ] Base components (table, chip, tile, delta)
+- [x] App shell: top bar, search box, disclaimer footer
+- [ ] Theme toggle (dark tokens exist, the switch does not)
+- [ ] Working company search
 
 **Exit test:** one command runs the pipeline for a date and the app shell shows the correct "as of" date and a working company search.
 
