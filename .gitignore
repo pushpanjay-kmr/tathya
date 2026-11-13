@@ -1,0 +1,27 @@
+# Dependencies
+node_modules/
+.venv/
+__pycache__/
+*.pyc
+
+# Build output
+.next/
+dist/
+build/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Local data (never commit market data dumps)
+data/raw/
+data/cache/
+*.parquet
+*.sqlite
+
+# Editor and OS
+.DS_Store
+.idea/
+.vscode/
+*.log
