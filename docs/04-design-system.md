@@ -1,6 +1,6 @@
 # 04. Design system
 
-Status: **draft**. Two visual directions are proposed below. One will be chosen after mockups of the home page in both.
+Status: **direction chosen**. Ledger (light) is the default. Terminal is the dark theme. Tokens below are still draft until the core screens are mocked up.
 
 ## Brand
 
@@ -23,7 +23,7 @@ Lower-case `tathya` in the UI typeface at semibold weight, with the Devanagari `
 - Percentages carry a sign when they are changes: `+1.2%`, `-0.6%`.
 - Use an en dash only for missing values in tables, shown as `–`.
 
-## Direction A: "Ledger" (light-first)
+## Default theme: "Ledger" (light)
 
 A research-report feel. Warm paper background, ink text, one deep accent. Reads well for long sessions and in print.
 
@@ -37,7 +37,7 @@ A research-report feel. Warm paper background, ink text, one deep accent. Reads 
 | `accent` | `#1F4E5F` | Links, active states, brand |
 | `accent-soft` | `#E3EEF1` | Selected chips, highlights |
 
-## Direction B: "Terminal" (dark-first)
+## Dark theme: "Terminal"
 
 A dense workstation feel. Near-black background, cool grey text, one bright accent. Best for scanning large tables.
 
@@ -51,16 +51,16 @@ A dense workstation feel. Near-black background, cool grey text, one bright acce
 | `accent` | `#F2B84B` | Links, active states, brand |
 | `accent-soft` | `#3A2F17` | Selected chips, highlights |
 
-Whichever direction wins, the other becomes the alternate theme, so both light and dark ship.
+Both themes ship. Ledger is what a new visitor sees.
 
 ## Semantic colours (both directions)
 
 | Token | Light | Dark | Use |
 |---|---|---|---|
-| `up` | `#0B8A4A` | `#35C27B` | Positive change |
+| `up` | `#087A40` | `#35C27B` | Positive change |
 | `down` | `#C93A3A` | `#F06A6A` | Negative change |
 | `flat` | `#6B665E` | `#8B95A5` | No change |
-| `warn` | `#B7791F` | `#E0A840` | Caution, stale data |
+| `warn` | `#8A5A12` | `#E0A840` | Caution, stale data |
 | `danger` | `#9B1C1C` | `#F28B82` | Red flags |
 | `info` | `#1F4E5F` | `#6FB6CC` | Notes, derived-data markers |
 
@@ -132,7 +132,7 @@ Rules:
 
 ## Next steps
 
-1. Mock up the home page in both directions.
-2. Choose one; record it in the [decision log](10-decisions.md).
-3. Mock up the stock page, scanner and screener in the chosen direction.
+1. ~~Mock up the home page in both directions.~~ Done.
+2. ~~Choose one; record it in the [decision log](10-decisions.md).~~ Ledger chosen.
+3. ~~Mock up the stock page, scanner and screener in Ledger.~~ Done, awaiting approval.
 4. Export tokens to the Tailwind config when the scaffold is created.

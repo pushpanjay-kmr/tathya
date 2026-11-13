@@ -11,9 +11,9 @@ Deferred items and open questions. Build tasks live in the [roadmap](docs/08-roa
 
 ## Design phase
 
-- [ ] Home page mockups in both visual directions (Ledger, Terminal)
-- [ ] Choose the default direction and record it in the decision log
-- [ ] Mockups: stock page, scanner, screener
+- [x] Home page mockups in both visual directions (Ledger, Terminal)
+- [x] Choose the default direction and record it in the decision log (Ledger)
+- [x] Mockups: stock page, scanner, screener (awaiting approval)
 - [ ] Wordmark and favicon
 
 ## Open questions

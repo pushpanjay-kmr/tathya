@@ -5,9 +5,9 @@ Phases are sequential. Each has an exit test: the phase is done when the test pa
 ## Phase 0. Design (in progress)
 
 - [x] Product and design documents in the repo
-- [ ] Home page mockups in both visual directions
-- [ ] Choose a direction and record it
-- [ ] Mockups: stock page, scanner, screener
+- [x] Home page mockups in both visual directions
+- [x] Choose a direction and record it (Ledger default, Terminal dark)
+- [x] Mockups: stock page, scanner, screener (awaiting approval)
 - [ ] Confirm tech stack
 
 **Exit test:** the four core screens are mocked up in the chosen direction and approved.
